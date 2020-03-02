@@ -40,20 +40,26 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<distributionManagement>
-	  <snapshotRepository>
-	    <id>snapshots</id>
-	    <url>http://35.154.30.68:8081/nexus/content/repositories/snapshots</url>
-	  </snapshotRepository>
-	</distributionManagement>
+	
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			  <groupId>org.codehaus.mojo</groupId>
+			  <artifactId>sonar-maven-plugin</artifactId>
+			  <version>3.0.2</version>
+			</plugin>
 			</plugins>
 	</build>
+	<distributionManagement>
+	  <snapshotRepository>
+	    <id>snapshots</id>
+	    <url>http://35.154.30.68:8081/nexus/content/repositories/snapshots</url>
+	  </snapshotRepository>
+	</distributionManagement>
 
 
 </project>
